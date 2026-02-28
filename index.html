@@ -23,6 +23,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  padding-bottom: 5vh;  
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
@@ -191,8 +192,14 @@ body {
 
 .flowers {
   position: relative;
-  transform: scale(0.7); /* Reducido de 0.9 a 0.7 */
+  transform: scale(0.75);
   z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .flowers {
+    transform: scale(0.45);
+  }
 }
 
 .flower {
@@ -728,32 +735,43 @@ body {
 /* New CSS for the text */
 .special-text {
     position: fixed;
-    top: 3%;
+    top: 6%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
     font-family: Helvetica, sans-serif;
     font-size: 3vmin;
-    text-shadow: 0 0 1vmin rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 90%;
     z-index: 10;
     opacity: 0;
     animation: fadeIn 3s 1s forwards;
-    margin: center;
 }
+
+@media (max-width: 600px) {
+  .special-text {
+    font-size: 4vw;
+    top: 8%;
+  }
 
 .special-text2 {
     position: fixed;
-    top: 90%;
-    left: 90%;
+    bottom: 3%;
+    left: 50%;
     transform: translateX(-50%);
     color: #fff;
     font-family: Helvetica, sans-serif;
     font-size: 2vmin;
-    text-shadow: 0 0 1vmin rgba(255, 255, 255, 0.5);
-    z-index: 10;
+    text-align: center;
     opacity: 0;
     animation: fadeIn 3s 1s forwards;
-    margin: center;
+}
+
+@media (max-width: 600px) {
+  .special-text2 {
+    font-size: 3.5vw;
+    bottom: 4%;
+  }
 }
 
 /* KEYFRAMES */
@@ -1330,3 +1348,4 @@ body {
   </script>
 </body>
 </html>
+
